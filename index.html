@@ -18,7 +18,6 @@
         <section class="heading">
           <div class="heading-container">
             <nav class="navbar">
-              <a href="#home">ACCUEIL</a>
               <a href="#about-me">À PROPOS DE MOI</a>
               <a href="#portfolio">PORTFOLIO</a>
               <a href="#skills">COMPETENCES</a>
@@ -27,13 +26,13 @@
             <div class="frame">
               <div class="image-container">
                 <div class="photo-container">
-                  <img class="photo" src="asset/IMG_1032 2 (1).jpg" />
+                  <img class="photo" src="asset/IMG_1031.png" />
                 </div>
                 <div class="gretings">
                   <p class="style1">BONJOUR</p>
                   <p class="style2">Je m’appelle:</p>
                   <p class="style3">Karpenko Daria</p>
-                  <p class="style2">Je suis Développeuse Web B1</p>
+                  <p class="style2">Étudiante en developpement web</p>
                 </div>
               </div>
             </div>
@@ -84,7 +83,7 @@
         </div>
         <div class="symbol-main">
           <div class="symbol">
-          <p class="style4">PORTFOLIO</p>
+          <p id="portfolio" class="style4">PORTFOLIO</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="3"
@@ -95,7 +94,7 @@
             <path d="M1.6239 0.487671L1.37602 80.5123" stroke="white" />
           </svg>
           </div>
-          <section id="portfolio" class="portfolio">
+          <section  class="portfolio">
             <div class="card">
               <div class="img-project">
                 <img src="asset/Marshall.jpg" alt="profile" />
@@ -141,7 +140,7 @@
             <div class="card">
               <div class="img-project">
                 <img
-                  src="asset/LOGO LETTRE black FINAL_page-0001 (1).jpg"
+                  src="asset/eva.png"
                   alt="profile"
                 />
               </div>
@@ -192,25 +191,51 @@
             <path d="M1.6239 0.487671L1.37602 80.5123" stroke="white" />
           </svg>
           </div>
-          <div class="skills-content">
-            <div class="competencies">
-              <p class="style1">HTML</p>
+          <div class="menu">
+            <button class="style7" onclick="openPage('Page-1', this)">
+              Langages
+            </button>
+            <button class="style7" onclick="openPage('Page-2', this)">
+              Frameworks
+            </button>
+            <button class="style7" onclick="openPage('Page-3', this)">
+              Logiciels
+            </button>
+          </div>
+
+          <div id="Page-1" class="tabcontent">
+            <div class="title">
+              <h3 class="style3">
+                HTML/CSS <br>
+                <br>
+                JavaScript <br>
+                <br>
+                Pyton 
+              </h3>
             </div>
-            <div class="competencies">
-              <p class="style1">CSS</p>
+          </div>
+          <div id="Page-2" class="tabcontent">
+            <div class="title">
+              <h3 class="style3">
+                Bootstrap
+              </h3>
             </div>
-            <div class="competencies">
-              <p class="style1">JAVASCRIPT</p>
+
+          </div>
+          <div id="Page-3" class="tabcontent">
+            <div class="title">
+              <h3 class="style3">
+                Illustrator<br />
+                <br />
+                Figma<br />
+                <br />
+                Photoshop <br />
+                <br />
+                Git
+              </h3>
             </div>
-            <div class="competencies">
-              <p class="style1">PYTHON</p>
-            </div>
-            <div class="competencies">
-              <p class="style1">ILLUSTRATOR</p>
-            </div>
-            <div class="competencies">
-              <p class="style1">FIGMA</p>
-            </div>
+          </div>
+        </section>
           </div>
          </section>
       </div>
@@ -242,10 +267,12 @@
                 sept. 2019 - dec.2021
               </button>
               <button class="style7" onclick="openPage('Page5', this)">
-                jan.2022-août.2023
+                jan.2022 - août.2023
+              </button>
+              <button class="style7" onclick="openPage('Page6', this)">
+                sept.2023 - 2026
               </button>
             </div>
-
             <div id="Page1" class="tabcontent">
               <div class="title">
                 <h3 class="style3">
@@ -276,7 +303,6 @@
                 </p>
               </div>
             </div>
-
             <div id="Page3" class="tabcontent">
               <div class="title">
                 <h3 class="style3">
@@ -306,8 +332,36 @@
                 </h3>
               </div>
               <div class="subtitle">
-                <p class="style6">
+                <p class="style6">  
                   Les cours de la langue et civilisation françaises.
+                </p>
+              </div>
+            </div>
+            <div id="Page6" class="tabcontent">
+              <div class="title">
+                <h3 class="style3">
+                  L'École Supérieure du Digital <br />
+                  Bordeaux, France.<br />
+                </h3>
+              </div>
+              <div class="subtitle">
+                <p class="style6">  
+                  Premier semestre:
+                  <br />
+                  <br />
+                  Anglais<br />
+                  Atelier d'écriture<br />
+                  CMS<br />
+                  Environnement & culture technique<br />
+                  Integration<br />
+                  JavaScript<br />
+                  Logiciels creation graphique<br />
+                  Philosophie<br />
+                  PHP,SQL & POO<br />
+                  Veille & exp. digitales<br />
+                  web design
+
+
                 </p>
               </div>
             </div>
@@ -315,32 +369,20 @@
         </div>
       </main>
       <footer id="contact" class="contacts">
-        <div class="symbol-main">
-          <p class="style4">CONTACT</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="3"
-            height="81"
-            viewBox="0 0 3 81"
-            fill="none"
-          >
-            <path d="M1.6239 0.487671L1.37602 80.5123" stroke="white" />
-          </svg>
-          <p class="style5">E-mail</p>
-          <p class="style6">daria.karpenko@mail-esd.com</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="3"
-            height="81"
-            viewBox="0 0 3 81"
-            fill="none"
-          >
-            <path d="M1.6239 0.487671L1.37602 80.5123" stroke="white" />
-          </svg>
-          <p class="style5">Phone</p>
-          <p class="style6">+33 07 68 23 90 28</p>
+        <div class="info">
+          <a href="mailto:daria.karpenko@mail-esd.com">
+            <img class="media" width="50" height="50" src="asset/mail.svg" alt="send-mass-email"/>
+        </a>
+        <a href="https://www.linkedin.com/in/karpetoryba/">
+          <img class="media" width="50" height="50" src="asset/social.svg" alt="Profil LinkedIn"/>
+      </a>
+      <a href="asset/Karpenko D.A. C.V.pdf" download="YourPortfolio.pdf">
+        <img class="media" width="50" height="50" src="asset/approved.svg" alt="Profil LinkedIn"/>
+      </a>
+
         </div>
       </footer>
       <script src="index.js"></script>
   </body>
 </html>
+

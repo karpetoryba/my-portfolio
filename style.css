@@ -29,11 +29,11 @@
   /*------COLOR-----------*/
   /*-----------------------*/
   --background: #2c2c2c;
-  --primary-color: #007bff; /* Пример основного цвета */
-  --highlight-color: #ff5722; /* Пример цвета подсветки */
-  --secondary-color: #6c757d; /* Пример вторичного цвета */
-  --text-color: #212529; /* Пример цвета текста */
-  --background: #ffffff; /* Пример цвета фона */
+  --primary-color: #007bff;
+  --highlight-color: #ff5722;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
+  --background: #ffffff;
 }
 
 * {
@@ -41,6 +41,7 @@
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: url("asset/cursor\ \(2\).png"), auto;
 }
 html,
 body {
@@ -58,11 +59,16 @@ header {
   margin: 10px;
   justify-content: center;
 }
+a {
+  margin: 20px;
+}
+
 .row {
   display: flex;
   gap: 200px;
   flex-direction: column;
 }
+
 /*---------------------*/
 /*------HEADER-----------*/
 /*------NAVBAR----------*/
@@ -150,7 +156,7 @@ img .photo {
   gap: 40px;
   align-content: center;
   align-items: flex-start;
-  margin: 50px;
+  margin: 30px;
 }
 /*-----------------------*/
 /*--------DES STYLES-----*/
@@ -195,6 +201,14 @@ img .photo {
   color: #fff;
   font-family: Inter;
   font-size: 25px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 158%;
+}
+.style-footer {
+  color: #fff;
+  font-family: Inter;
+  font-size: 10px;
   font-style: normal;
   font-weight: 100;
   line-height: 158%;
@@ -292,12 +306,13 @@ img .photo {
 /*-----------------------*/
 .portfolio {
   display: flex;
-  flex-wrap: nowrap; /* Карточки будут в одной строке */
-  gap: 20px; /* Расстояние между карточками */
-  overflow-x: auto; /* Добавление горизонтального скроллинга */
-  justify-content: flex-start; /* Выравнивание карточек к началу контейнера */
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: flex-start;
   padding: 20px;
-  width: 100%; /* Ширина контейнера */
+  width: 100%;
 }
 
 .portfolio::-webkit-scrollbar {
@@ -388,16 +403,16 @@ img .photo {
 /*-----------------------*/
 .competencies {
   display: flex;
-  justify-content: center; /* Центрируем содержимое по горизонтали */
-  align-items: center; /* Центрируем содержимое по вертикали */
-  flex-direction: column; /* Элементы идут друг под другом */
-  width: 20%; /* Или установите конкретный размер в пикселях/ремах, если это необходимо */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
   padding: 10px 100px;
   border: 1px solid #f1f1f1;
   margin: 20px;
-  min-width: 120px; /* Минимальная ширина для поддержания униформности размеров */
-  text-align: center; /* Отцентрировать текст внутри блока */
-  word-wrap: break-word; /* Перенос слов, чтобы они не выходили за пределы блока */
+  min-width: 120px;
+  text-align: center;
+  word-wrap: break-word;
   width: fit-content;
   min-width: 200px;
 }
@@ -405,8 +420,8 @@ img .photo {
 .skills-content {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Центрируем элементы по вертикали */
-  flex-wrap: wrap; /* Обеспечиваем перенос элементов на новую строку, если они не помещаются */
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /*-----------------------*/
@@ -416,7 +431,19 @@ img .photo {
 /*-----------------------*/
 /*---FOOTER-------------*/
 /*-----------------------*/
+footer {
+  margin: 200px;
+  display: flex;
+  padding: var(--spacing-7xl) var(--spacing-none);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-none);
+  background: var(--grey-main);
+}
 
+/*-----------------------*/
+/*---BURGER-MENU---------*/
+/*-----------------------*/
 .burger-menu {
   display: none;
   cursor: pointer;
@@ -466,16 +493,20 @@ img .photo {
 }
 
 @media (max-width: 480px) {
+  .image-container {
+    gap: 0px;
+  }
+  .photo-container {
+    transform-origin: center top;
+    transform: scale(0.5);
+  }
+
   .navbar a {
     font-size: 18px;
   }
 
   .burger-line {
     width: 25px;
-  }
-
-  .gretings p {
-    font-size: smaller;
   }
 
   .menu {
@@ -486,5 +517,8 @@ img .photo {
   .symbol {
     display: flex;
     justify-content: center;
+  }
+  .media {
+    margin: 10px;
   }
 }

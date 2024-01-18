@@ -10,7 +10,7 @@ document.querySelectorAll(".navbar a").forEach((link) => {
     this.classList.add("active");
   });
 });
-
+//
 function openPage(pageName, elmnt) {
   Array.from(document.getElementsByClassName("tabcontent")).forEach(function (
     tab
