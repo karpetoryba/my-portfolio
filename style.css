@@ -47,6 +47,7 @@ html,
 body {
   max-width: 1920px;
   background-color: #191b1e;
+  overflow-x: hidden;
 }
 main {
   display: flex;
@@ -315,88 +316,39 @@ img .photo {
 /*-----------------------*/
 /*---PORTFOLIO-----------*/
 /*-----------------------*/
-.portfolio {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  justify-content: flex-start;
-  padding: 20px;
-  width: 100%;
-}
-
-.portfolio::-webkit-scrollbar {
-  height: 10px;
-}
-
-.portfolio::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.portfolio::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.portfolio::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 .card {
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
-  transition: transform 0.5s, box-shadow 0.5s;
-  cursor: pointer;
-  position: relative;
-}
-
-.img-project {
-  height: 100%;
-  width: 100%;
-  transition: opacity 0.5s;
-}
-
-.container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffff; /* Темно-синий цвет фона */
+  color: #000000; /* Белый цвет текста */
+  margin: 20px;
+  overflow: hidden; /* Обрезает содержимое карточки */
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s;
-  transform: translateY(100%);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
   padding: 20px;
 }
 
-.card:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+.card-title {
+  margin: 0;
+  font-size: 24px;
 }
 
-.card:hover .img-project img {
-  opacity: 0.7;
-}
-
-.card:hover .container {
-  transform: translateY(0);
-}
-
-.language-icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.language-icon img {
-  width: 24px;
-  height: 24px;
+.card-description {
+  font-size: 16px;
 }
 
 .view-code-btn {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 15px;
-  border: 2px solid #212529;
+  border: 2px solid #000000;
   background-color: transparent;
   color: #2c2c2c;
   text-transform: uppercase;
@@ -405,9 +357,29 @@ img .photo {
   transition: background-color 0.9s, color 0.3s;
 }
 
-.view-code-btn:hover {
-  background-color: #212529;
-  color: white;
+/* Стили для скроллинга карточек */
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Плавный скроллинг на iOS */
+}
+.img-img {
+  width: 100%;
+}
+@keyframes cardHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card:hover {
+  animation: cardHover 0.3s ease-in-out;
 }
 /*-----------------------*/
 /*---SKILS--------------*/
@@ -519,9 +491,25 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .img-proj {
+    height: 40%;
+  }
+  .portfolio {
+    gap: 40px;
+  }
+  .container {
+    width: 90%;
+    margin: 0px 20px 0 0;
+  }
   .photo-container {
     transform-origin: center top;
     transform: scale(0.7);
+  }
+  .img-project {
+    width: 50%;
+  }
+  .card {
+    width: 50%;
   }
 }
 
@@ -583,5 +571,27 @@ footer {
 @media screen and (max-width: 410px) {
   .style2 {
     font-size: 16px;
+  }
+}
+
+/* pour des carts portfolio */
+@media only screen and (max-width: 600px) {
+  /* Стили для телефонов */
+  .card {
+    flex: 0 0 90%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Стили для планшетов */
+  .card {
+    flex: 0 0 45%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Стили для компьютеров */
+  .card {
+    flex: 0 0 30%;
   }
 }
