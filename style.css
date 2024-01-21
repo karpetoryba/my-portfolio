@@ -109,13 +109,24 @@ img .photo {
   width: 626px;
   height: 534px;
 }
+.image-mobile {
+  width: auto;
+  height: 50px;
+  display: none;
+}
+.logo-menu {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 
 /*-----------------------*/
 /*---IMAGE-CONTAINER-----*/
 /*-----------------------*/
+
 .photo-container {
   position: relative;
-  display: flex;
+  display: block;
   justify-content: flex-end;
 }
 .photo-container:after {
@@ -131,7 +142,7 @@ img .photo {
 .photo-container::before {
   content: "";
   display: block;
-  width: 110%;
+  width: 100%;
   height: 100%;
   transform: translateY(-15%) translateX(20%);
   position: absolute;
@@ -450,6 +461,8 @@ footer {
   flex-direction: column;
   gap: 5px;
   margin: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .burger-line {
@@ -458,6 +471,10 @@ footer {
   height: 3px;
   background-color: #fff;
 }
+
+/*-----------------------*/
+/*--MEDIA-----------------*/
+/*-----------------------*/
 
 @media (max-width: 1130px) {
   .burger-menu {
@@ -491,21 +508,31 @@ footer {
     align-items: center;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 900px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .photo-container {
+    transform-origin: center top;
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .info {
+    flex-direction: column-reverse;
+    margin: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  .image-container {
-    gap: 0px;
-  }
-  .style6 {
-    font-size: 18px;
-  }
-  .photo-container {
-    transform-origin: center top;
-    transform: scale(0.5);
-  }
-
   .navbar a {
     font-size: 18px;
   }
@@ -518,12 +545,43 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
+  .image-container {
+    gap: var(--space-none);
+  }
+  .logo-menu {
+    justify-content: flex-end;
+  }
+  .image-mobile {
+    display: block;
+    margin: 10px 30px 10px 0px;
+  }
+  .photo-container {
+    display: none;
+  }
+  .style6 {
+    font-size: 18px;
+  }
+  .photo-container {
+    transform-origin: center top;
+    transform: scale(0.5);
+  }
   .symbol {
     display: flex;
     justify-content: center;
   }
   .media {
     margin: 10px;
+  }
+  .style1 {
+    font-size: 19px;
+  }
+  .style2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .style2 {
+    font-size: 16px;
   }
 }
