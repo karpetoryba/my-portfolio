@@ -317,10 +317,10 @@ img .photo {
 /*---PORTFOLIO-----------*/
 /*-----------------------*/
 .card {
-  background-color: #ffffff; /* Темно-синий цвет фона */
-  color: #000000; /* Белый цвет текста */
+  background-color: #ffffff;
+  color: #000000;
   margin: 20px;
-  overflow: hidden; /* Обрезает содержимое карточки */
+  overflow: hidden;
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s;
@@ -333,15 +333,18 @@ img .photo {
 
 .card-content {
   padding: 20px;
+  font-family: Inter;
 }
 
 .card-title {
   margin: 0;
   font-size: 24px;
+  font-family: Inter;
 }
 
 .card-description {
   font-size: 16px;
+  font-family: Inter;
 }
 
 .view-code-btn {
@@ -355,13 +358,13 @@ img .photo {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.9s, color 0.3s;
+  font-family: Inter;
 }
 
-/* Стили для скроллинга карточек */
 .cards-container {
   display: flex;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Плавный скроллинг на iOS */
+  -webkit-overflow-scrolling: touch;
 }
 .img-img {
   width: 100%;
@@ -572,9 +575,14 @@ footer {
   .style2 {
     font-size: 16px;
   }
+  .card {
+    flex: 0 0 100%;
+  }
 }
 
 /* pour des carts portfolio */
+/* Медиа-запрос для экрана шириной 380px и менее */
+
 @media only screen and (max-width: 600px) {
   /* Стили для телефонов */
   .card {
