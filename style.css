@@ -111,8 +111,9 @@ img .photo {
   height: 534px;
 }
 .image-mobile {
-  width: auto;
+  width: 70px;
   height: 50px;
+
   display: none;
 }
 .logo-menu {
