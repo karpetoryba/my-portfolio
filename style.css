@@ -533,7 +533,7 @@ footer {
   }
   .cards-container {
     margin-left: 30px;
-    max-width: 80vh;
+    max-width: 60vh;
   }
 }
 @media (max-width: 480px) {
