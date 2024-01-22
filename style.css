@@ -526,6 +526,16 @@ footer {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .info {
+    flex-direction: column-reverse;
+    margin: 20px;
+  }
+  .cards-container {
+    margin-left: 30px;
+    max-width: 80vh;
+  }
+}
 @media (max-width: 480px) {
   .navbar a {
     font-size: 18px;
