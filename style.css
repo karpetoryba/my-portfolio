@@ -520,6 +520,10 @@ footer {
     flex-direction: column-reverse;
     margin: 20px;
   }
+  .cards-container {
+    margin-left: 30px;
+    max-width: 80vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -580,24 +584,20 @@ footer {
 }
 
 /* pour des carts portfolio */
-/* Медиа-запрос для экрана шириной 380px и менее */
 
 @media only screen and (max-width: 600px) {
-  /* Стили для телефонов */
   .card {
     flex: 0 0 90%;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* Стили для планшетов */
   .card {
     flex: 0 0 45%;
   }
 }
 
 @media only screen and (min-width: 1025px) {
-  /* Стили для компьютеров */
   .card {
     flex: 0 0 30%;
   }
