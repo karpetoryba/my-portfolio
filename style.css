@@ -346,6 +346,10 @@ img .photo {
   font-size: 16px;
   font-family: Inter;
 }
+.card-description-1 {
+  padding-bottom: 60px;
+  font-family: Inter;
+}
 
 .view-code-btn {
   display: inline-block;
